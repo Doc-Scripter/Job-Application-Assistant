@@ -1,0 +1,39 @@
+job-application-assistant
+├── cmd                      # Command-line executable files
+│   └── main.go              # Entry point of the application
+├── internal                 # Internal package for core logic
+│   ├── cvparser            # CV parsing module
+│   │   ├── parser.go        # Logic for parsing CVs
+│   │   └── models.go        # Data models for CV information
+│   ├── jobscraper          # Job scraping module
+│   │   ├── scraper.go       # Logic for scraping job postings
+│   │   └── models.go        # Data models for job information
+│   ├── coverletter         # Cover letter generation module
+│   │   ├── generator.go     # Logic for generating cover letters using AI
+│   │   └── templates.go     # Cover letter templates
+│   ├── autofill            # Auto-fill functionality
+│   │   ├── autofill.go      # Logic for auto-filling forms
+│   │   └── config.go        # Configuration for auto-fill settings
+│   ├── ai                  # AI module for integrating external APIs
+│   │   ├── openai.go        # Integration with OpenAI API
+│   │   └── huggingface.go   # Integration with Hugging Face API
+├── pkg                      # Shared packages
+│   ├── utils               # Utility functions
+│   │   └── helpers.go       # General helper functions
+│   └── config              # Configuration management
+│       └── config.go        # Load configuration settings
+├── web                      # Web interface files
+│   ├── static              # Static files (CSS, JavaScript)
+│   └── templates           # HTML templates for frontend
+│       └── index.html       # Main webpage
+├── scripts                 # Scripts for setup and deployment
+│   ├── setup.sh             # Setup script
+│   └── cleanup.sh           # Script to clean temporary files
+├── test                    # Directory for unit tests
+│   ├── cvparser_test.go     # Tests for CV parsing
+│   ├── jobscraper_test.go   # Tests for job scraping
+│   └── coverletter_test.go   # Tests for cover letter generation
+├── .env                     # Environment variables
+├── go.mod                   # Go module definition
+├── go.sum                   # Go module lock file
+└── README.md                # Project documentation
